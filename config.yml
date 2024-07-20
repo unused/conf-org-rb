@@ -1,0 +1,6 @@
+---
+secret_key: 'secret'
+files:
+  reviewers: reviewers.yml
+  output: export/submissions/
+  template: import/introduction.md
