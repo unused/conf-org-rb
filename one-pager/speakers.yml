@@ -1,0 +1,52 @@
+---
+hotels:
+  a:
+    name: Hotel A
+    address: |
+      ...
+    phone: +xxx xx xxx-xxx
+    location_url: https://maps.app.goo.gl/...
+    description: |
+      hotel description
+  b:
+    name: Hotel A
+    address: |
+      ...
+    phone: +xxx xx xxx-xxx
+    location_url: https://maps.app.goo.gl/...
+    description: |
+      hotel description
+speakers:
+  person_a:
+    name: Person A
+    hotel: a
+    accommodation: 10-14&nbsp;September
+    image_url: "https://2024.euruko.org/assets/images/speakers/a.jpg"
+    talks:
+      - type: talk
+        title: TBD
+        additional_description: the closing keynote
+        day: three, 13 September,
+        location: main stage
+        time: '12:00'
+        duration: 30 minutes
+      - type: panel discussion
+        title: "Some Panel Discussion"
+        additional_description: the closing panel discussion
+        day: three, 13 September,
+        time: '12:30'
+        location: main stage
+        duration: 30 minutes
+  person_b:
+    name: Person B
+    hotel: b
+    accommodation: 10-14&nbsp;September
+    image_url: "https://2024.euruko.org/assets/images/speakers/b.jpg"
+    talks:
+      - type: keynote
+        title: TBD
+        additional_description:
+        day: one, 11 September,
+        location: main stage
+        time: '10:00'
+        duration: 30 minutes

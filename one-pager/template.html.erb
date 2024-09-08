@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <link rel="stylesheet" href="<%= @assets_root %>/assets/css/app.css">
+  </head>
+  <body>
+    <div class="page">
+      <main class="content">
+        <header class="header">
+          <div class="header__content" style="flex-flow:row nowrap">
+            <img src="<%= @info.image_url %>"
+                 style="width:18rem;height:18rem;margin:1.5rem;border-radius:10px;object-fit:cover" />
+            <div>
+              <h1 class="header__title">
+                <%= @info.name %>
+              </h1>
+              <p style="text-align:left;margin-bottom:1rem">
+                <% @info._talks.each do |talk| %>
+                  Your <%= talk.type %> <q><%= talk.title %></q>
+                  is <%= talk.additional_description %> on
+                  day <%= talk.day %> and takes place on <%= talk.location %>.
+                  It is scheduled for <%= talk.time %> and has a duration of
+                  <%= talk.duration %>.
+                <% end %>
+                Please be at the stage at least 5 minutes before your talk.</p>
+              <p style="text-align:left">The stage is ...</p>
+            </div>
+          </div>
+        </header>
+        <section class="section section--basic">
+          <div class="section__content">
+            <h3 class="section__title has-dot">Hotel</h3>
+            <p class="section__text mb--2">
+              We have booked a room for you at <%= @hotel.name %> from
+              <%= @info.accommodation %>. The full address of the hotel is
+              <strong><a href="<%= @hotel.location_url %>"><%= @hotel.address %></a></strong>.
+              ...
+              <%= @hotel.description %>
+              ...
+            </p>
+            <h3 class="section__title has-dot">Event A</h3>
+            <p class="section__text mb--2">
+              ...
+            </p>
+          </div>
+          <div class="section__content">
+            <h3 class="section__title has-dot">Event B</h3>
+            <p class="section__text mb--2">
+              ...
+            </p>
+            <h3 class="section__title has-dot">City</h3>
+            <p class="section__text mb--2">...</p>
+          </div>
+        </section>
+        <section class="section section--basic">
+          <div class="section__content" style="width:58rem">
+            <p class="section__text mb--2" style="max-width:58rem;font-size:14px !important;">
+              Emergency numbers are ...
+
+              The phone number for <%= @hotel.name %> is <%= @hotel.phone %>.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__header">
+          <img src="<%= @assets_root %>/assets/images/goat.png" alt="G.O.A.T. Footer" />
+        </div>
+        <div class="footer__body">
+          <div class="footer__content"></div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
