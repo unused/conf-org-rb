@@ -8,8 +8,8 @@ conference.
 [Scheduler](/scheduler): A tool to help to build and compare a conference
 programme.
 
-[CFP Management](/cfp_management): Some scripts to create documents for the
+[CFP Management](/cfp-management): Some scripts to create documents for the
 Call for Proposals review process.
 
-[One Pager](/one_pager): Scripts to generate a one-pager for individual speaker
+[One Pager](/one-pager): Scripts to generate a one-pager for individual speaker
 information.
