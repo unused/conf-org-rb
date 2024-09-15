@@ -1,0 +1,22 @@
+<tr>
+  <td class="center">
+    <time datetime="2024-09-<%= 11 + @day %>T<%= time.to_ft %>">
+      <%= time.strftime('%H:%M') %>
+    </time>
+  </td>
+  <% slots.each do |slot| %>
+    <td<%= { 'keynote' => ' colspan="3"', 'workshop' => ' rowspan="2"' }[slot.type] %>>
+      <div class="schedule__slot">
+        <img class="schedule__slot__image" src="/speakers/<%= slot.image %>" />
+        <div class="schedule__slot__details">
+          <span class="schedule__slot__title">
+            <%= slot.description %>
+          </span>
+          <span class="schedule__slot__person">
+            <%= slot.speaker %>
+          </span>
+        </div>
+      </div>
+    </td>
+  <% end %>
+</tr>

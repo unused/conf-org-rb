@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Christoph Lipautz",
+    "email": "christoph@lipautz.org",
+    "avatar": "",
+    "location": "Graz, Austria",
+    "bio": "Fellow Rubyist",
+    "twitter": "@lipdaguit",
+    "url": "",
+    "organization": "",
+    "talk_format": "Talk (~30-45 minutes)",
+    "title": "Testing in Practice",
+    "abstract": "Fancy abstract about my talk.",
+    "description": "A detailed description about stuff I'm going to talk about.",
+    "notes": "",
+    "audience_level": "All",
+    "tags": ["Ruby", "DevTools", "Testing"],
+    "rating": 0.0,
+    "state": "submitted",
+    "confirmed": false,
+    "created_at": "2024-04-15T22:05:31.834Z",
+    "additional_info": ""
+  }
+]

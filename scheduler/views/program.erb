@@ -1,0 +1,22 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <title>EuRuKo 2024 - Program</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&amp;family=Kanit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/euruko.css">
+    <link rel="stylesheet" href="/euruko-timetable.css">
+  </head>
+  <body>
+    <main class="page">
+      <%= erb :_header %>
+
+      <table class="timetable">
+        <%= erb :_timetable_header %>
+
+        <% @timetable.slots_by_time.each do |time, slots| %>
+          <%= erb :_timetable_row, {}, { time:, slots: } %>
+        <% end %>
+      </table>
+    </main>
+  </body>
+</html>

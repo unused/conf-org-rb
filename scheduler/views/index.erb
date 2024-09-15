@@ -1,0 +1,66 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <title>Scheduler</title>
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&amp;family=Kanit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --font-size: 1.2rem;
+        /* EuRuKo colors */
+        --text-color-default: #FFFFFF;
+        --text-color-dark: #000000;
+        --primary-color: #EF001D;
+        --secondary-color: #031C24;
+        --primary-color: #EF001D;
+        --card-label-ruby: #DB2026;
+        --card-label-default: #545454;
+        --card-label-gold: #C3C706;
+        --card-label-silver: #7A7676;
+        --card-label-bronze: #925904;
+        --card-lebel-online: #0A95C1;
+        --card-label-travel: #55B509;
+        --card-label-helper: #0C5A10;
+
+        /* chota colors */
+        --bg-color: #031C24;
+        --bg-secondary-color: #545454;
+        --font-color: #FFFFFF;
+        --font-family-sans: 'Kanit', sans-serif;
+      }
+      * {
+        text-rendering: optimizeLegibility;
+      }
+      .nav {
+        padding: 2.5rem;
+      }
+      .main {
+        padding: 5rem;
+      }
+      td:first-child {
+        width: 12rem;
+      }
+      td {
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-left">
+        <h1>Scheduler</h1>
+      </div>
+      <div class="nav-right">
+        <span class="text-grey">
+          <%= DateTime.now.strftime '%F' %>
+        </span>
+      </div>
+    </nav>
+
+    <main class="main row" style="flex-wrap:nowrap">
+      <% @schedules.each do |schedule| %>
+        <%= erb :schedule, {}, { schedule: } %>
+      <% end %>
+    </main>
+  </body>
+</html>

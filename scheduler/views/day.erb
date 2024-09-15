@@ -1,0 +1,22 @@
+<table class="striped">
+  <thead>
+    <tr>
+      <th colspan="3"><%= day.description %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% day.slots.each do |slot| %>
+      <tr style="height: <%= slot.duration / 3.0 %>rem">
+        <td><%= "#{slot.start_time.to_ft} - #{slot.end_time.to_ft}" %></td>
+        <td>
+          <span class="tag is-small"><%= slot.type %></span>
+          &nbsp;
+          <span class="is-small"><%= slot.description %></span>
+          &nbsp;
+          <%= '-' if slot.speaker %>
+          <span class="is-small"><%= slot.speaker %></span>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

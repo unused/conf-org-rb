@@ -1,0 +1,17 @@
+<div class="col">
+  <h2><%= schedule.name %></h2>
+
+  <div style="display:flex;flex-flow:row wrap;">
+    <% schedule.description.split(',') do |labels| %>
+      <span class="tag is-small" style="margin:.5rem">
+        <%= labels.chomp %>
+      </span>
+    <% end %>
+  </div>
+
+  <%= erb :summary, {}, { report: schedule.summary } %>
+
+  <% schedule.days.each do |day| %>
+    <%= erb :day, {}, { day: } %>
+  <% end %>
+</div>
